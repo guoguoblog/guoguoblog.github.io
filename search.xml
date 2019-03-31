@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>果果De博客站点通告</title>
-      <link href="/2019-03-25-hello-world.html"/>
-      <url>/2019-03-25-hello-world.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="重新建站说明"><a href="#重新建站说明" class="headerlink" title="重新建站说明"></a>重新建站说明</h1><p> &nbsp;&nbsp;&nbsp;&nbsp;大家可能会在百度上搜索到一些关于本博客的文章，不过由于那时我建博客的动机还过于幼稚，没过多久就弃坑了。想要再找回那些文章已经是难上加难。所以一些在百度上检索到的文章点进去可能是 404 界面，请大家谅解。</p><h1 id="博客说明"><a href="#博客说明" class="headerlink" title="博客说明"></a>博客说明</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;本博客是由青岛一名网名为果果的学生所建。主要会在上面写一些关于C语言 NOIP 学习和 Python 学习的文章，偶尔会更新一些其他编程语言和其他的奇淫技巧。 <a id="more"></a></p><h1 id="有关博客本身"><a href="#有关博客本身" class="headerlink" title="有关博客本身"></a>有关博客本身</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;博客是搭建在 github 上的，程序员应该对这个网站耳熟能详了。上面提供的 pages 服务确实是很好用的。博客使用的系统是 hexo 静态博客，所有内容以 markdown 呈现。我会专门写一个系列的博客介绍以这个系统为基础进行建站。博客不时会进行更新，每次更新都会有对应的 changelog。大家可尽情查看。</p><h1 id="有关打赏"><a href="#有关打赏" class="headerlink" title="有关打赏"></a>有关打赏</h1><p>本人有微信，有支付宝，如果各位看官觉得文章写的不错，可以打个几块钱的赏，让我买瓶肥宅快乐水啥的快乐快乐~</p><h1 id="有关朋友"><a href="#有关朋友" class="headerlink" title="有关朋友"></a>有关朋友</h1><p>目前有一朋友，网名为小虎皮，有理想开一家公司。经济头脑极强。他目前做着低价苹果系列产品的贩卖（转卖）工作。有兴趣的各位可以关注一下他的博客。博客网址是：<a href="https://xiaohupi.github.io" target="_blank" rel="noopener">https://xiaohupi.github.io</a>.</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[果果De博客站点通告]]></title>
+    <url>%2F2019-03-25-hello-world.html</url>
+    <content type="text"><![CDATA[重新建站说明 &nbsp;&nbsp;&nbsp;&nbsp;大家可能会在百度上搜索到一些关于本博客的文章，不过由于那时我建博客的动机还过于幼稚，没过多久就弃坑了。想要再找回那些文章已经是难上加难。所以一些在百度上检索到的文章点进去可能是 404 界面，请大家谅解。 博客说明&nbsp;&nbsp;&nbsp;&nbsp;本博客是由青岛一名网名为果果的学生所建。主要会在上面写一些关于C语言 NOIP 学习和 Python 学习的文章，偶尔会更新一些其他编程语言和其他的奇淫技巧。 有关博客本身&nbsp;&nbsp;&nbsp;&nbsp;博客是搭建在 github 上的，程序员应该对这个网站耳熟能详了。上面提供的 pages 服务确实是很好用的。博客使用的系统是 hexo 静态博客，所有内容以 markdown 呈现。我会专门写一个系列的博客介绍以这个系统为基础进行建站。博客不时会进行更新，每次更新都会有对应的 changelog。大家可尽情查看。 有关打赏本人有微信，有支付宝，如果各位看官觉得文章写的不错，可以打个几块钱的赏，让我买瓶肥宅快乐水啥的快乐快乐~ 有关朋友目前有一朋友，网名为小虎皮，有理想开一家公司。经济头脑极强。他目前做着低价苹果系列产品的贩卖（转卖）工作。有兴趣的各位可以关注一下他的博客。博客网址是：https://xiaohupi.github.io.]]></content>
+  </entry>
 </search>
