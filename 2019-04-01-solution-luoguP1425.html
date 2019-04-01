@@ -105,17 +105,18 @@
 
 
 
-  <meta name="description" content="原题目题目描述输入两个整数a,b，输出它们的和(|a|,|b|&amp;lt;=10^9)。 注意  pascal使用integer会爆掉哦！ 有负数哦！ c/c++的main函数必须是int类型，而且最后要return 0。这不仅对洛谷其他题目有效，而且也是noip/noi比赛的要求！">
+  <meta name="description" content="原题目题目描述伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。 这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按24小时制计算），它发现自己从a时b分一直游泳到当天的c时d分，请你帮小鱼计算一下，它这天一共游了多少时间呢？ 小鱼游的好辛苦呀，你可不要算错了哦。">
+<meta name="keywords" content="NOIP,C,洛谷">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解_洛谷P1001 A+B问题">
-<meta property="og:url" content="http://qwedc001.github.io/2019-03-31-solution_luoguP1001.html">
+<meta property="og:title" content="题解_洛谷P1425 小鱼的游泳时间">
+<meta property="og:url" content="http://qwedc001.github.io/2019-04-01-solution-luoguP1425.html">
 <meta property="og:site_name" content="果果De博客">
-<meta property="og:description" content="原题目题目描述输入两个整数a,b，输出它们的和(|a|,|b|&amp;lt;=10^9)。 注意  pascal使用integer会爆掉哦！ 有负数哦！ c/c++的main函数必须是int类型，而且最后要return 0。这不仅对洛谷其他题目有效，而且也是noip/noi比赛的要求！">
+<meta property="og:description" content="原题目题目描述伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。 这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按24小时制计算），它发现自己从a时b分一直游泳到当天的c时d分，请你帮小鱼计算一下，它这天一共游了多少时间呢？ 小鱼游的好辛苦呀，你可不要算错了哦。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-31T14:42:36.614Z">
+<meta property="og:updated_time" content="2019-04-01T13:23:38.705Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="题解_洛谷P1001 A+B问题">
-<meta name="twitter:description" content="原题目题目描述输入两个整数a,b，输出它们的和(|a|,|b|&amp;lt;=10^9)。 注意  pascal使用integer会爆掉哦！ 有负数哦！ c/c++的main函数必须是int类型，而且最后要return 0。这不仅对洛谷其他题目有效，而且也是noip/noi比赛的要求！">
+<meta name="twitter:title" content="题解_洛谷P1425 小鱼的游泳时间">
+<meta name="twitter:description" content="原题目题目描述伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。 这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按24小时制计算），它发现自己从a时b分一直游泳到当天的c时d分，请你帮小鱼计算一下，它这天一共游了多少时间呢？ 小鱼游的好辛苦呀，你可不要算错了哦。">
 
 
 
@@ -125,7 +126,7 @@
 
   
   
-  <link rel="canonical" href="http://qwedc001.github.io/2019-03-31-solution_luoguP1001">
+  <link rel="canonical" href="http://qwedc001.github.io/2019-04-01-solution-luoguP1425">
 
 
 
@@ -135,7 +136,7 @@
   };
 </script>
 
-  <title>题解_洛谷P1001 A+B问题 | 果果De博客</title>
+  <title>题解_洛谷P1425 小鱼的游泳时间 | 果果De博客</title>
   
 
 
@@ -259,6 +260,23 @@
         
         
           
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -350,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qwedc001.github.io/2019-03-31-solution_luoguP1001.html">
+    <link itemprop="mainEntityOfPage" href="http://qwedc001.github.io/2019-04-01-solution-luoguP1425.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="果果">
@@ -367,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">题解_洛谷P1001 A+B问题
+          <h1 class="post-title" itemprop="name headline">题解_洛谷P1425 小鱼的游泳时间
 
               
             
@@ -394,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-03-31 22:39:16 / 修改时间：22:42:36" itemprop="dateCreated datePublished" datetime="2019-03-31T22:39:16+08:00">2019-03-31</time>
+              <time title="创建时间：2019-04-01 20:29:54 / 修改时间：21:23:38" itemprop="dateCreated datePublished" datetime="2019-04-01T20:29:54+08:00">2019-04-01</time>
             
 
             
@@ -405,6 +423,24 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程题解/" itemprop="url" rel="index"><span itemprop="name">编程题解</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -414,6 +450,13 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
           
 
           
@@ -427,7 +470,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.1k</span>
+                <span title="本文字数">1.3k</span>
               
 
               
@@ -441,7 +484,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">6 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -461,80 +504,23 @@
       
 
       
-        <h1 id="原题目"><a href="#原题目" class="headerlink" title="原题目"></a>原题目</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>输入两个整数a,b，输出它们的和(|a|,|b|&lt;=10^9)。</p>
-<p>注意</p>
-<ol>
-<li>pascal使用integer会爆掉哦！</li>
-<li>有负数哦！</li>
-<li>c/c++的main函数必须是int类型，而且最后要return 0。这不仅对洛谷其他题目有效，而且也是noip/noi比赛的要求！<a id="more"></a>
-好吧，同志们，我们就从这一题开始，向着大牛的路进发。</li>
-</ol>
-<blockquote>
-<p>任何一个伟大的思想，都有一个微不足道的开始。</p>
-</blockquote>
+        <h1 id="原题目"><a href="#原题目" class="headerlink" title="原题目"></a>原题目</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。</p>
+<p>这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按24小时制计算），它发现自己从a时b分一直游泳到当天的c时d分，请你帮小鱼计算一下，它这天一共游了多少时间呢？</p>
+<p>小鱼游的好辛苦呀，你可不要算错了哦。<br><a id="more"></a></p>
 <h2 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h2><p><strong>输入格式：</strong></p>
-<p>两个整数以空格分开</p>
+<p>一行内输入 4 个整数，分别表示 a, b, c, d。</p>
 <p><strong>输出格式：</strong></p>
-<p>一个数</p>
-<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p><strong>输入样例#1：</strong></p>
-<p>20 30</p>
+<p>一行内输出 2 个整数 e 和 f，用空格间隔，依次表示小鱼这天一共游了多少小时多少分钟。其中表示分钟的整数 f 应该小于60。</p>
+<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p><strong>输入样例#1：</strong> </p>
+<p>12 50 19 10</p>
 <p><strong>输出样例#1：</strong></p>
-<p>50</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>本题各种语言的程序范例：</p>
-<p>C</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, a+b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>C++</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a+b;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Pascal</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a, b: longint;</span><br><span class="line">begin</span><br><span class="line">    readln(a,b);</span><br><span class="line">    writeln(a+b);</span><br><span class="line">end.</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Python2</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = raw_input().split()</span><br><span class="line">print <span class="keyword">int</span>(s[<span class="number">0</span>]) + <span class="keyword">int</span>(s[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Python3</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = input().split()</span><br><span class="line">print(<span class="keyword">int</span>(s[<span class="number">0</span>]) + <span class="keyword">int</span>(s[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Scanner cin=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> a = cin.nextInt(), b = cin.nextInt();</span><br><span class="line">        System.out.println(a+b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>JavaScript （Node.js）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="keyword">const</span> data = fs.readFileSync(<span class="string">'/dev/stdin'</span>)</span><br><span class="line"><span class="keyword">const</span> result = data.toString(<span class="string">'ascii'</span>).trim().split(<span class="string">' '</span>).map(<span class="function"><span class="params">x</span> =&gt;</span> <span class="built_in">parseInt</span>(x)).reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br><span class="line">process.exit() <span class="comment">// 请注意必须在出口点处加入此行</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>Ruby</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a, b = gets.split.map(&amp;<span class="symbol">:to_i</span>)</span><br><span class="line">print a+b</span><br></pre></td></tr></table></figure>
-<hr>
-<p>PHP</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$input = trim(file_get_contents(<span class="string">"php://stdin"</span>));</span><br><span class="line"><span class="keyword">list</span>($a, $b) = explode(<span class="string">' '</span>, $input);</span><br><span class="line"><span class="keyword">echo</span> $a + $b;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Rust</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::io;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> input=<span class="built_in">String</span>::new();</span><br><span class="line">    io::stdin().read_line(&amp;<span class="keyword">mut</span> input).unwrap();</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> s=input.trim().split(<span class="string">' '</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> a:<span class="built_in">i32</span>=s.next().unwrap()</span><br><span class="line">               .parse().unwrap();</span><br><span class="line">    <span class="keyword">let</span> b:<span class="built_in">i32</span>=s.next().unwrap()</span><br><span class="line">               .parse().unwrap();</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"&#123;&#125;"</span>,a+b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Go</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a, b <span class="keyword">int</span></span><br><span class="line">    fmt.Scanf(<span class="string">"%d%d"</span>, &amp;a, &amp;b)</span><br><span class="line">    fmt.Println(a+b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>C# Mono</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">APlusB</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">string</span>[] input = Console.ReadLine().Split(<span class="string">' '</span>);</span><br><span class="line">        Console.WriteLine(<span class="keyword">int</span>.Parse(input[<span class="number">0</span>]) + <span class="keyword">int</span>.Parse(input[<span class="number">1</span>]));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Visual Basic Mono</p>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Imports</span> System</span><br><span class="line"></span><br><span class="line"><span class="keyword">Module</span> APlusB</span><br><span class="line">    <span class="keyword">Sub</span> Main()</span><br><span class="line">        Dim ins As String() = Console.ReadLine().Split(New Char()&#123;" "c&#125;)</span><br><span class="line">        Console.WriteLine(Int(ins(<span class="number">0</span>))+Int(ins(<span class="number">1</span>)))</span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Module</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>Kotlin</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> (a, b) = readLine()!!.split(<span class="string">' '</span>).map(String::toInt)</span><br><span class="line">    println(a + b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Haskell</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">main</span> = <span class="keyword">do</span></span><br><span class="line">    [a, b] &lt;- (map read . words) `fmap` getLine</span><br><span class="line">    print (a+b)</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Scala</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Main</span> <span class="keyword">extends</span> <span class="title">App</span> </span>&#123;</span><br><span class="line">    println(scala.io.<span class="type">StdIn</span>.readLine().split(<span class="string">" "</span>).map(_.toInt).sum)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>Perl</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">my</span> $in = &lt;STDIN&gt;;</span><br><span class="line"><span class="keyword">chomp</span> $in;</span><br><span class="line">$in = [<span class="keyword">split</span> <span class="regexp">/[\s,]+/</span>, $in];</span><br><span class="line"><span class="keyword">my</span> $c = $in-&gt;[<span class="number">0</span>] + $in-&gt;[<span class="number">1</span>];</span><br><span class="line"><span class="keyword">print</span> <span class="string">"$c\n"</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h2><p><a href="https://www.luogu.org/problemnew/show/P1001" target="_blank" rel="noopener">点我去做题</a></p>
-<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>好吧其实我也不知道为啥我要写 A+B 的题解，毕竟人家洛谷官方已经给出这么多题解了。不过本着逢题必解的原则，我还是再发一遍。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, a+b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>这个题目……真的没啥好讲的。最基本的题目。</p>
+<p>6 20</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>对于全部测试数据，<script type="math/tex">0\le a,c \le 240≤a,c≤24，0\le b,d \le 600≤b,d≤60</script>，且结束时间一定晚于开始时间。</p>
+<h2 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h2><p><a href="https://www.luogu.org/problemnew/show/P1425" target="_blank" rel="noopener">点我去做题</a></p>
+<h1 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>emmmm。这个题唯一的一个坑就是在做减法的时候可能会出现脑子转不过弯来的情况。其他的就没啥了。<br>当然，还有一种思路是把小时转换成分钟，求出分钟数再转化为小时和分钟。这样就不必要分类讨论了。<br>为了方便大家理解，两种代码都放上。<br>哦还有，这次用 C++，语法和 C 语言是差不多的。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>思路 1：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> a,b,c,d;</span><br><span class="line">  <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d;</span><br><span class="line">  <span class="keyword">int</span> x=c-a,y=d-b;</span><br><span class="line">  <span class="keyword">if</span>(y&lt;<span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    x--;y+=<span class="number">60</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">" "</span>&lt;&lt;y;</span><br><span class="line">  <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>思路 2：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> HourA,HourB,MinuteA,MinuteB;<span class="comment">//定义开始时间和结束时间（分钟，小时） </span></span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;HourA&gt;&gt;MinuteA&gt;&gt;HourB&gt;&gt;MinuteB;<span class="comment">//输入 </span></span><br><span class="line">	<span class="keyword">int</span> HourMinuteA=HourA*<span class="number">60</span>,HourMinuteB=HourB*<span class="number">60</span>;<span class="comment">//将小时转换为分钟 </span></span><br><span class="line">	<span class="keyword">int</span> minuteResult=(HourMinuteB+MinuteB)-(HourMinuteA+MinuteA);<span class="comment">//获取游了多少分钟 </span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;minuteResult/<span class="number">60</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;minuteResult%<span class="number">60</span>;<span class="comment">//结果除以60得到小时，结果mod 60 得到分钟数 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>这是洛谷训练营第一小节的最后一题。可以看出，这一题已经有了思维的初步展现。后续的题目也会越来越有挑战性的。</p>
 
       
     </div>
@@ -589,6 +575,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/NOIP/" rel="tag"># NOIP</a>
+          
+            <a href="/tags/C/" rel="tag"># C</a>
+          
+            <a href="/tags/洛谷/" rel="tag"># 洛谷</a>
+          
+        </div>
+      
 
       
       
@@ -598,8 +594,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019-03-31-solution_luoguP1000.html" rel="next" title="题解_洛谷P1000 超级玛丽游戏">
-                <i class="fa fa-chevron-left"></i> 题解_洛谷P1000 超级玛丽游戏
+              <a href="/2019-03-31-solution-luoguP1421.html" rel="next" title="题解_洛谷P1421 小玉买文具">
+                <i class="fa fa-chevron-left"></i> 题解_洛谷P1421 小玉买文具
               </a>
             
           </div>
@@ -608,8 +604,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019-03-31-solution_luoguP1421.html" rel="prev" title="题解_洛谷P1421 小玉买文具">
-                题解_洛谷P1421 小玉买文具 <i class="fa fa-chevron-right"></i>
+              <a href="/2019-04-01-solution-luoguP1422.html" rel="prev" title="题解_洛谷P1422 小玉家的电费">
+                题解_洛谷P1422 小玉家的电费 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -668,7 +664,6 @@
           </li>
         </ul>
       
-
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -686,14 +681,54 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -781,6 +816,17 @@
       
 
       
+			
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NOIP/">NOIP</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/洛谷/">洛谷</a><span class="tag-list-count">5</span></li></ul>
+        </canvas>
+    </div>
+</div>
 
     </div>
   </aside>
@@ -805,7 +851,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">10k</span>
   
 
   
@@ -814,7 +860,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
   
 </div>
 
@@ -833,6 +879,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -949,7 +1021,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019-03-31-solution_luoguP1001.html'
+    refer: '2019-04-01-solution-luoguP1425.html'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
@@ -1294,6 +1366,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 

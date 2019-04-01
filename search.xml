@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[题解_洛谷P1422 小玉家的电费]]></title>
+    <url>%2F2019-04-01-solution-luoguP1422.html</url>
+    <content type="text"><![CDATA[原题目题目描述夏天到了，各家各户的用电量都增加了许多，相应的电费也交的更多了。小玉家今天收到了一份电费通知单。小玉看到上面写：据闽价电[2006]27号规定，月用电量在150千瓦时及以下部分按每千瓦时0.4463元执行，月用电量在151~400千瓦时的部分按每千瓦时0.4663元执行，月用电量在401千瓦时及以上部分按每千瓦时0.5663元执行;小玉想自己验证一下，电费通知单上应交电费的数目到底是否正确呢。请编写一个程序，已知用电总计，根据电价规定，计算出应交的电费应该是多少。 输入输出格式输入格式： 输入一个整数，表示用电总计（单位以千瓦时计），不超过10000。 输出格式： 输出一个数，保留到小数点后1位（单位以元计，保留到小数点后1位）。 输入输出样例输入样例#1： 267 输出样例#1： 121.5 题目地址点我去做题 解题思路这个题目是要分三部分讨论的。第一部分：如果月用电量在 150kW/h 以下，则结果是用电量0.4463。第二部分：如果月用电量 在 400kW/h 以下在 150kW/h 以上，则结果是 150\0.4463+(月用电量-150)*0.4663。第三部分：否则，结果是 150*0.4463+(月用电量-150)*0.4663+(月用电量-400)*0.5663。（应该没问题。有问题请在评论里指正）运算就是了考察的是 if 函数。 代码1234567891011121314151617181920212223242526272829#include &lt;iostream&gt;#include &lt;cstdio&gt;using namespace std;int main()&#123; int power; double result; cin&gt;&gt;power; //判断是不是在150kW/h以下（含） if(power&lt;=150) &#123; result=power*0.4463; &#125; //判断是不是在400kW/h以下（含） else if(power&lt;=400) &#123; int powerSplit=power-150;//150kW/h以上要交0.4663元 result=(power-powerSplit)*0.4463+powerSplit*0.4663; &#125; //判断是不是在401kW/h以上（含） else &#123; int powerSplit=power-150;//150kW/h以上要交0.5663元 int powerSplit1=power-powerSplit-150; result=150*0.4463+powerSplit*0.4663+powerSplit1*0.5663; &#125; printf("%0.1f",result); return 0;&#125; 后记顺序与分支，主要考察的是语句的执行顺序和 if 判断。这算是小试牛刀了。大家学会了吗？]]></content>
+      <categories>
+        <category>编程题解</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>C</tag>
+        <tag>洛谷</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[题解_洛谷P1425 小鱼的游泳时间]]></title>
+    <url>%2F2019-04-01-solution-luoguP1425.html</url>
+    <content type="text"><![CDATA[原题目题目描述伦敦奥运会要到了，小鱼在拼命练习游泳准备参加游泳比赛，可怜的小鱼并不知道鱼类是不能参加人类的奥运会的。 这一天，小鱼给自己的游泳时间做了精确的计时（本题中的计时都按24小时制计算），它发现自己从a时b分一直游泳到当天的c时d分，请你帮小鱼计算一下，它这天一共游了多少时间呢？ 小鱼游的好辛苦呀，你可不要算错了哦。 输入输出格式输入格式： 一行内输入 4 个整数，分别表示 a, b, c, d。 输出格式： 一行内输出 2 个整数 e 和 f，用空格间隔，依次表示小鱼这天一共游了多少小时多少分钟。其中表示分钟的整数 f 应该小于60。 输入输出样例输入样例#1： 12 50 19 10 输出样例#1： 6 20 说明对于全部测试数据，0\le a,c \le 240≤a,c≤24，0\le b,d \le 600≤b,d≤60，且结束时间一定晚于开始时间。 题目地址点我去做题 解题思路emmmm。这个题唯一的一个坑就是在做减法的时候可能会出现脑子转不过弯来的情况。其他的就没啥了。当然，还有一种思路是把小时转换成分钟，求出分钟数再转化为小时和分钟。这样就不必要分类讨论了。为了方便大家理解，两种代码都放上。哦还有，这次用 C++，语法和 C 语言是差不多的。 代码思路 1：1234567891011121314#include &lt;iostream&gt;using namespace std;int main()&#123; int a,b,c,d; cin&gt;&gt;a&gt;&gt;b&gt;&gt;c&gt;&gt;d; int x=c-a,y=d-b; if(y&lt;0) &#123; x--;y+=60; &#125; cout&lt;&lt;x&lt;&lt;" "&lt;&lt;y; return 0;&#125; 思路 2：12345678910111213#include &lt;iostream&gt;using namespace std;int main()&#123; int HourA,HourB,MinuteA,MinuteB;//定义开始时间和结束时间（分钟，小时） cin&gt;&gt;HourA&gt;&gt;MinuteA&gt;&gt;HourB&gt;&gt;MinuteB;//输入 int HourMinuteA=HourA*60,HourMinuteB=HourB*60;//将小时转换为分钟 int minuteResult=(HourMinuteB+MinuteB)-(HourMinuteA+MinuteA);//获取游了多少分钟 cout&lt;&lt;minuteResult/60&lt;&lt;" "&lt;&lt;minuteResult%60;//结果除以60得到小时，结果mod 60 得到分钟数 return 0;&#125; 后记这是洛谷训练营第一小节的最后一题。可以看出，这一题已经有了思维的初步展现。后续的题目也会越来越有挑战性的。]]></content>
+      <categories>
+        <category>编程题解</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>C</tag>
+        <tag>洛谷</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[题解_洛谷P1421 小玉买文具]]></title>
-    <url>%2F2019-03-31-solution_luoguP1421.html</url>
+    <url>%2F2019-03-31-solution-luoguP1421.html</url>
     <content type="text"><![CDATA[原题目题目描述班主任给小玉一个任务，到文具店里买尽量多的签字笔。已知一只签字笔的价格是1元9角，而班主任给小玉的钱是a元b角，小玉想知道，她最多能买多少只签字笔呢。 输入输出格式输入格式： 输入的数据，在一行内，包括两个整数，依次表示a和b，a&lt;=10000,b&lt;=9。 输出格式： 输出一个整数，表示小玉最多能买多少只签字笔。 输入输出样例输入样例#1： 10 3 输出样例#1： 5 题目地址点我去做题 解题思路这是洛谷新手村的第三题。这道题同样还是比较简单的。输入了 a 和 b 以后，将两个数字转换成现实中的钱数。如输入 10 和 3，转换成 10.3。然后按照去尾法进行除法运算。得出的结果就是我们想要的。 代码1234567891011#include &lt;stdio.h&gt;int main() &#123; double penPrice=1.9; int yuan,jiao; scanf("%d%d",&amp;yuan,&amp;jiao); double realPrice = yuan+(jiao*0.1); int result=(int)(realPrice/penPrice); printf("%d",result); return 0;&#125; 后记这个题目考察了 C 语言中整数和小数的转换。还有大家对于去尾法的了解（毕竟你不可能买「半只笔」，所以多余的钱只能够舍去而不能够四舍五入）。]]></content>
+      <categories>
+        <category>编程题解</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>C</tag>
+        <tag>洛谷</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[题解_洛谷P1001 A+B问题]]></title>
-    <url>%2F2019-03-31-solution_luoguP1001.html</url>
+    <url>%2F2019-03-31-solution-luoguP1001.html</url>
     <content type="text"><![CDATA[原题目题目描述输入两个整数a,b，输出它们的和(|a|,|b|&lt;=10^9)。 注意 pascal使用integer会爆掉哦！ 有负数哦！ c/c++的main函数必须是int类型，而且最后要return 0。这不仅对洛谷其他题目有效，而且也是noip/noi比赛的要求！ 好吧，同志们，我们就从这一题开始，向着大牛的路进发。 任何一个伟大的思想，都有一个微不足道的开始。 输入输出格式输入格式： 两个整数以空格分开 输出格式： 一个数 输入输出样例输入样例#1： 20 30 输出样例#1： 50 说明本题各种语言的程序范例： C 12345678#include &lt;stdio.h&gt;int main() &#123; int a,b; scanf("%d%d",&amp;a,&amp;b); printf("%d", a+b); return 0;&#125; C++ 1234567891011#include &lt;iostream&gt;#include &lt;cstdio&gt;using namespace std;int main() &#123; int a,b; cin &gt;&gt; a &gt;&gt; b; cout &lt;&lt; a+b; return 0;&#125; Pascal 12345var a, b: longint;begin readln(a,b); writeln(a+b);end. Python2 12s = raw_input().split()print int(s[0]) + int(s[1]) Python3 12s = input().split()print(int(s[0]) + int(s[1])) Java 123456789import java.io.*;import java.util.*;public class Main &#123; public static void main(String args[]) throws Exception &#123; Scanner cin=new Scanner(System.in); int a = cin.nextInt(), b = cin.nextInt(); System.out.println(a+b); &#125;&#125; JavaScript （Node.js） 12345const fs = require('fs')const data = fs.readFileSync('/dev/stdin')const result = data.toString('ascii').trim().split(' ').map(x =&gt; parseInt(x)).reduce((a, b) =&gt; a + b, 0)console.log(result)process.exit() // 请注意必须在出口点处加入此行 Ruby 12a, b = gets.split.map(&amp;:to_i)print a+b PHP 1234&lt;?php$input = trim(file_get_contents("php://stdin"));list($a, $b) = explode(' ', $input);echo $a + $b; Rust 12345678910111213use std::io;fn main()&#123; let mut input=String::new(); io::stdin().read_line(&amp;mut input).unwrap(); let mut s=input.trim().split(' '); let a:i32=s.next().unwrap() .parse().unwrap(); let b:i32=s.next().unwrap() .parse().unwrap(); println!("&#123;&#125;",a+b);&#125; Go 123456789package mainimport "fmt"func main() &#123; var a, b int fmt.Scanf("%d%d", &amp;a, &amp;b) fmt.Println(a+b)&#125; C# Mono 12345678using System;public class APlusB&#123; private static void Main()&#123; string[] input = Console.ReadLine().Split(' '); Console.WriteLine(int.Parse(input[0]) + int.Parse(input[1])); &#125;&#125; Visual Basic Mono 12345678Imports SystemModule APlusB Sub Main() Dim ins As String() = Console.ReadLine().Split(New Char()&#123;" "c&#125;) Console.WriteLine(Int(ins(0))+Int(ins(1))) End SubEnd Module Kotlin 1234fun main(args: Array&lt;String&gt;) &#123; val (a, b) = readLine()!!.split(' ').map(String::toInt) println(a + b)&#125; Haskell 123main = do [a, b] &lt;- (map read . words) `fmap` getLine print (a+b) Scala 123object Main extends App &#123; println(scala.io.StdIn.readLine().split(" ").map(_.toInt).sum)&#125; Perl 12345my $in = &lt;STDIN&gt;;chomp $in;$in = [split /[\s,]+/, $in];my $c = $in-&gt;[0] + $in-&gt;[1];print "$c\n"; 题目地址点我去做题 解题思路好吧其实我也不知道为啥我要写 A+B 的题解，毕竟人家洛谷官方已经给出这么多题解了。不过本着逢题必解的原则，我还是再发一遍。 代码12345678#include &lt;stdio.h&gt;int main() &#123; int a,b; scanf("%d%d",&amp;a,&amp;b); printf("%d", a+b); return 0;&#125; 后记这个题目……真的没啥好讲的。最基本的题目。]]></content>
+      <categories>
+        <category>编程题解</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>C</tag>
+        <tag>洛谷</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[题解_洛谷P1000 超级玛丽游戏]]></title>
-    <url>%2F2019-03-31-solution_luoguP1000.html</url>
+    <url>%2F2019-03-31-solution-luoguP1000.html</url>
     <content type="text"><![CDATA[原题目题目背景本题是洛谷的试机题目，可以帮助了解洛谷的使用。建议完成本题目后继续尝试P1001、P1008。 题目描述超级玛丽是一个非常经典的游戏。请你用字符画的形式输出超级玛丽中的一个场景。12345678910111213141516171819202122 ******** ************ ####....#. #..###.....##.... ###.......###### ### ### ........... #...# #...# ##*####### #.#.# #.#.# ####*******###### #.#.# #.#.# ...#***.****.*###.... #...# #...# ....**********##..... ### ### ....**** *****.... #### #### ###### #####################################################################...#......#.##...#......#.##...#......#.##------------------############################################------------------##..#....#....##..#....#....##..#....#....############################################################### #----------##.....#......##.....#......##.....#......# #----------########################################### #----------##.#..#....#..##.#..#....#..##.#..#....#..# #----------########################################### ############ 输入输出格式输入格式： 无 输出格式： 如描述 输入输出样例暂无测试点 题目地址点我去做题 解题思路这是属于初学者的第一关。这道题目只考察了 cout 的使用。一行一行 cout 即可。 代码123456789101112131415161718192021222324252627#include&lt;stdio.h&gt;int main()&#123; printf(" ********\n"); printf(" ************\n"); printf(" ####....#.\n"); printf(" #..###.....##....\n"); printf(" ###.......###### ### ###\n"); printf(" ........... #...# #...#\n"); printf(" ##*####### #.#.# #.#.#\n"); printf(" ####*******###### #.#.# #.#.#\n"); printf(" ...#***.****.*###.... #...# #...#\n"); printf(" ....**********##..... ### ###\n"); printf(" ....**** *****....\n"); printf(" #### ####\n"); printf(" ###### ######\n"); printf("##############################################################\n"); printf("#...#......#.##...#......#.##...#......#.##------------------#\n"); printf("###########################################------------------#\n"); printf("#..#....#....##..#....#....##..#....#....#####################\n"); printf("########################################## #----------#\n"); printf("#.....#......##.....#......##.....#......# #----------#\n"); printf("########################################## #----------#\n"); printf("#.#..#....#..##.#..#....#..##.#..#....#..# #----------#\n"); printf("########################################## ############\n"); return 0; &#125; 后记这个题目主要考察的是对于输出的使用。唯一的缺陷就是空格和字符这类东西很容易输错。所以一定要细心。这一定程度上也决定了成败。]]></content>
+      <categories>
+        <category>编程题解</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>C</tag>
+        <tag>洛谷</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[果果De博客站点通告]]></title>
     <url>%2F2019-03-25-hello-world.html</url>
     <content type="text"><![CDATA[重新建站说明 &nbsp;&nbsp;&nbsp;&nbsp;大家可能会在百度上搜索到一些关于本博客的文章，不过由于那时我建博客的动机还过于幼稚，没过多久就弃坑了。而且由于之前的域名已经被我搞坏了，想要再找回那些文章已经是难上加难。所以一些在百度上检索到的文章点进去可能是 404 界面，请大家谅解。 博客说明&nbsp;&nbsp;&nbsp;&nbsp;本博客是由青岛一名网名为果果的学生所建。主要会在上面写一些关于C语言 NOIP 学习和 Python 学习的文章，偶尔会更新一些其他编程语言和其他的奇淫技巧。 有关博客本身&nbsp;&nbsp;&nbsp;&nbsp;博客是搭建在 github 上的，程序员应该对这个网站耳熟能详了。上面提供的 pages 服务确实是很好用的。博客使用的系统是 hexo 静态博客，所有内容以 markdown 呈现。我会专门写一个系列的博客介绍以这个系统为基础进行建站。博客不时会进行更新，每次更新都会有对应的 changelog。大家可尽情查看。 有关打赏本人有微信，有支付宝，如果各位看官觉得文章写的不错，可以打个几块钱的赏，让我买瓶肥宅快乐水啥的快乐快乐~ 有关朋友目前有一朋友，网名为小虎皮，有理想开一家公司。经济头脑极强。他目前做着低价苹果系列产品的贩卖（转卖）工作。有兴趣的各位可以关注一下他的博客。博客网址是：https://xiaohupi.github.io.]]></content>
+      <categories>
+        <category>博客changelog</category>
+      </categories>
   </entry>
 </search>
